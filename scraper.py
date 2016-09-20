@@ -16,7 +16,6 @@ items = root.xpath("//div[@id='meetingContent']/ul/li/a")
 data = []
 for item in items:
     meeting = {}
-    print item.text
     date, committee = item.text.split("-", 1)
     meeting["titill"] = item.text
     meeting["url"] = urlparse.urljoin(BASE_URL, item.attrib["href"])
